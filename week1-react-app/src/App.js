@@ -16,7 +16,10 @@ class App extends Component{
         return(
             <div style={{textAlign: "center"}}>
                 <input vaule={this.state.userInput} onChange={(e) => this.userInputHandler(e)} />
-                <p>{this.state.userInput}</p>
+                {this.state.userInput
+                    ? <p>{this.state.userInput}</p>
+                    : <h3>Start Typing!</h3>
+                }
             </div>
         )
     }
